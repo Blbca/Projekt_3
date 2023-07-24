@@ -142,7 +142,7 @@ def election2017(link, soubor) -> None:
         print("Data jsou uložena v:", soubor)
         for s in strany:
             nadpisy.append(s)
-        with open(soubor, 'w', newline='') as f:
+        with open(soubor, 'w', encoding='UTF-8', newline='') as f:
             f_writer = csv.writer(f)
             f_writer.writerow(nadpisy)
             f_writer.writerows(hlavni_data)
